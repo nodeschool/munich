@@ -1,2 +1,3 @@
 # munich
-NodeSchool chapter for Munich
+
+website for nodeschool munich
