@@ -77,3 +77,4 @@ build/Release
 node_modules
 
 _site
+.idea
