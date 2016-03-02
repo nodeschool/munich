@@ -27,8 +27,8 @@ please contact an organizer immediately.
 
 ### Nodeschool Munich
 
-* Organizers: **Names of organizers plus Twitter handles to get in touch**
-* Meetup URL: **URL for meetup, FB group, etc.**
+* Organizers: **Peerigon GmbH ([Johannes Ewald](johannes.ewald@peerigon.com), [Markus Dobmann](markus.dobmann@peerigon.com))**
+* Meetup URL: **http://nodeschool.io/munich/**
 
 **If you have questions or feedback about this Code of Conduct please contact
 one of the organizers.**
