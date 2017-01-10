@@ -1,6 +1,6 @@
 # NodeSchool Munich
 
-See http://nodeschool.io/munich for more information and upcoming events and join us on [Meetup[(https://www.meetup.com/de-DE/Nodeschool-Munich/).
+See http://nodeschool.io/munich for more information and upcoming events and join us on [Meetup](https://www.meetup.com/de-DE/Nodeschool-Munich/).
 
 Any question or feedback? [Open an issue](https://github.com/nodeschool/munich/issues)
 If you want to improve our website, you can find it on the gh-pages branch.
@@ -10,6 +10,8 @@ If you want to improve our website, you can find it on the gh-pages branch.
 ## [Introduction Slides](http://nodeschool.io/augsburg/slides/introduction) 
 
 ## [Workshoppers](http://nodeschool.io/#workshopper-list)
+
+## [Code of Conduct](https://github.com/nodeschool/munich/blob/gh-pages/code_of_conduct.md)
 
 ## Mentors wanted!
 
