@@ -29,18 +29,25 @@
     "typography": "^0.16.19"
   },
   "devDependencies": {
-    "prettier": "^1.18.2"
+    "gh-pages": "^2.0.1",
+    "prettier": "^1.18.2",
+    "rimraf": "^2.6.3"
   },
+  "homepage": "http://nodeschool.github.io/munich",
   "keywords": [
     "gatsby"
   ],
   "license": "MIT",
   "scripts": {
+    "clean": "rimraf public",
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write src/**/*.{js,jsx}",
-    "start": "npm run develop",
+    "start": "yarn develop",
     "serve": "gatsby serve",
+    "build:slides": "cd ./slides && yarn install && yarn build",
+    "predeploy": "yarn clean",
+    "deploy": "yarn build:slides && gatsby build --prefix-paths && mv ./slides/build ./public/slides && gh-pages -d public",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
   },
   "repository": {
@@ -49,5 +56,11 @@
   },
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
+  },
+  "resolutions": {
+    "babel-loader": "8.0.4",
+    "eslint": "5.6.0",
+    "webpack": "4.19.1",
+    "webpack-dev-server": "3.1.9"
   }
 }
