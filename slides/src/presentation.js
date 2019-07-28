@@ -14,7 +14,7 @@ const theme = createTheme(
   {
     primary: 'white',
     secondary: '#1F2022',
-    tertiary: '#F9F919',
+    tertiary: '#E6BE02',
     quaternary: '#CECECE',
   },
   {
@@ -30,6 +30,7 @@ export default class Presentation extends Component {
         transition={['zoom', 'slide']}
         transitionDuration={500}
         theme={theme}
+        progress="none"
       >
         <Slide fill transition={['zoom']} bgColor="primary">
           <Image
@@ -151,10 +152,7 @@ export default class Presentation extends Component {
           </Heading>
         </Slide>
         <Slide branding footer transition={['fade']}>
-          <Image
-            height="400"
-            src="assets/images/event-sponsors/p7s1-logo-icon.png"
-          />
+          <Image src="assets/images/event-sponsors/p7s1-logo.jpg" />
         </Slide>
         <Slide branding footer transition={['fade']}>
           <Heading>
