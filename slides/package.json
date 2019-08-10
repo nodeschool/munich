@@ -1,5 +1,5 @@
 {
-  "name": "nodeschool-munich",
+  "name": "nodeschool-munich-slides",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -17,6 +17,7 @@
   "eslintConfig": {
     "extends": "react-app"
   },
+  "homepage": "http://nodeschool.github.io/slides",
   "browserslist": [
     ">0.2%",
     "not dead",

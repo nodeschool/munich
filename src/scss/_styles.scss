@@ -1,4 +1,4 @@
-@import "variables";
+@import 'variables';
 
 .section {
   padding: 1rem 0;
@@ -11,8 +11,10 @@
     padding: 2rem 0;
   }
 
-  h1, h2, h3 {
-    text-shadow: 1px 1px rgba(0, 0, 0, .24);
+  h1,
+  h2,
+  h3 {
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.24);
   }
 }
 
@@ -21,15 +23,31 @@
   color: white;
   text-decoration-color: white;
 
-  h1, h2, h3, h4, h5, h6, a, p, .caption {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  a,
+  p,
+  .caption {
     color: white;
   }
 
-  p a, li a {
-    background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0) 50%,lighten(white,20%) 50%);
-    text-shadow: 0.1rem 0 $whiskeyBackground, 0.15rem 0 $whiskeyBackground, -0.1rem 0 $whiskeyBackground, -0.15rem 0 $whiskeyBackground;
+  p a,
+  li a {
+    background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 50%,
+      lighten(white, 20%) 50%
+    );
+    text-shadow: 0.1rem 0 $whiskeyBackground, 0.15rem 0 $whiskeyBackground,
+      -0.1rem 0 $whiskeyBackground, -0.15rem 0 $whiskeyBackground;
 
-    &:hover, &:active, &:focus {
+    &:hover,
+    &:active,
+    &:focus {
       background-image: none;
     }
   }
@@ -52,7 +70,7 @@
     width: 45%;
 
     @include breakpoint(break-1) {
-      width: 35%;;
+      width: 35%;
     }
 
     @include breakpoint(break-2) {
@@ -76,7 +94,8 @@
 .site-footer {
   text-align: center;
 
-  ul, li {
+  ul,
+  li {
     list-style-type: none;
   }
 }

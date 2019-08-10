@@ -1,14 +1,14 @@
 /** @jsx jsx */
-import { Component } from 'react'
-// Import Spectacle Core tags
-import { Deck, Heading, ListItem, List, Text, Image, Link, S } from 'spectacle'
+import { Component } from 'react';
+import { Deck, Heading, ListItem, List, Text, Image, Link, S } from 'spectacle';
+import createTheme from 'spectacle/lib/themes/default';
+import { css, jsx } from '@emotion/core';
+import 'normalize.css';
 
-import { Slide } from './components/Slide'
+import { Slide } from './components/Slide';
+import config from './config';
 
-import createTheme from 'spectacle/lib/themes/default'
-import { css, jsx } from '@emotion/core'
-
-require('normalize.css')
+const { isProd, publicPath } = config;
 
 const theme = createTheme(
   {
@@ -20,8 +20,8 @@ const theme = createTheme(
   {
     primary: 'Montserrat',
     secondary: 'Helvetica',
-  },
-)
+  }
+);
 
 export default class Presentation extends Component {
   render() {
@@ -37,7 +37,9 @@ export default class Presentation extends Component {
             css={css`
               height: 700px;
             `}
-            src="assets/images/nodeschool-muc-logo.svg"
+            src={`${
+              isProd ? publicPath : ''
+            }/assets/images/nodeschool-muc-logo.svg`}
           ></Image>
         </Slide>
         <Slide branding footer transition={['fade']} bgColor="primary">
@@ -65,7 +67,11 @@ export default class Presentation extends Component {
         </Slide>
         <Slide branding footer transition={['fade']}>
           <Heading size={4}>Worldwide</Heading>
-          <Image src="assets/images/nodeschool-worldmap.png"></Image>
+          <Image
+            src={`${
+              isProd ? publicPath : ''
+            }/assets/images/nodeschool-worldmap.png`}
+          ></Image>
         </Slide>
         <Slide branding footer transition={['fade']}>
           <Heading>
@@ -77,22 +83,36 @@ export default class Presentation extends Component {
         </Slide>
         <Slide branding footer transition={['fade']}>
           <Heading size={4}>Self-guided Workshoppers</Heading>
-          <Image src="assets/images/workshoppers.png"></Image>
+          <Image
+            src={`${isProd ? publicPath : ''}/assets/images/workshoppers.png`}
+          ></Image>
         </Slide>
         <Slide branding footer transition={['fade']}>
-          <Image src="assets/images/learnyounode-1.png"></Image>
+          <Image
+            src={`${isProd ? publicPath : ''}/assets/images/learnyounode-1.png`}
+          ></Image>
         </Slide>
         <Slide branding footer transition={['fade']}>
-          <Image height="700" src="assets/images/learnyounode-2.png"></Image>
+          <Image
+            height="700"
+            src={`${isProd ? publicPath : ''}/assets/images/learnyounode-2.png`}
+          ></Image>
         </Slide>
         <Slide branding footer transition={['fade']}>
-          <Image height="700" src="assets/images/learnyounode-3.png"></Image>
+          <Image
+            height="700"
+            src={`${isProd ? publicPath : ''}/assets/images/learnyounode-3.png`}
+          ></Image>
         </Slide>
         <Slide branding footer transition={['fade']}>
-          <Image src="assets/images/workshops-1.png"></Image>
+          <Image
+            src={`${isProd ? publicPath : ''}/assets/images/workshops-1.png`}
+          ></Image>
         </Slide>
         <Slide branding footer transition={['fade']}>
-          <Image src="assets/images/workshops-2.png"></Image>
+          <Image
+            src={`${isProd ? publicPath : ''}/assets/images/workshops-2.png`}
+          ></Image>
         </Slide>
         <Slide branding footer transition={['fade']}>
           <Heading size={5}>More on</Heading>
@@ -104,13 +124,17 @@ export default class Presentation extends Component {
         </Slide>
         <Slide branding footer transition={['fade']}>
           <Heading size={5}>Ask for help, if you are stuck!</Heading>
-          <Image src="assets/images/ask-a-mentor.jpg"></Image>
+          <Image
+            src={`${isProd ? publicPath : ''}/assets/images/ask-a-mentor.jpg`}
+          ></Image>
         </Slide>
         <Slide branding footer transition={['fade']}>
           <Heading size={3}>Join us!</Heading>
           <Image
             height="400"
-            src="assets/images/nodeschool-muc-logo.svg"
+            src={`${
+              isProd ? publicPath : ''
+            }/assets/images/nodeschool-muc-logo.svg`}
           ></Image>
         </Slide>
         <Slide branding footer transition={['fade']}>
@@ -152,7 +176,11 @@ export default class Presentation extends Component {
           </Heading>
         </Slide>
         <Slide branding footer transition={['fade']}>
-          <Image src="assets/images/event-sponsors/p7s1-logo.jpg" />
+          <Image
+            src={`${
+              isProd ? publicPath : ''
+            }/assets/images/event-sponsors/p7s1-logo.jpg`}
+          />
         </Slide>
         <Slide branding footer transition={['fade']}>
           <Heading>
@@ -168,7 +196,12 @@ export default class Presentation extends Component {
           </Heading>
         </Slide>
         <Slide branding footer transition={['fade']}>
-          <Image height="400" src="assets/images/sponsors/peerigon.svg" />
+          <Image
+            height="400"
+            src={`${
+              isProd ? publicPath : ''
+            }/assets/images/sponsors/peerigon.svg`}
+          />
         </Slide>
         <Slide branding footer transition={['fade']}>
           <Heading>
@@ -181,6 +214,6 @@ export default class Presentation extends Component {
           </Heading>
         </Slide>
       </Deck>
-    )
+    );
   }
 }

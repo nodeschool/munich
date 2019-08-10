@@ -1,13 +1,15 @@
-const theme = require('./src/theme')
+const theme = require('./src/theme');
 
 module.exports = {
+  pathPrefix: '/munich',
   siteMetadata: {
     title: `NodeSchool Munich`,
     description: `Open source workshops that teach web software skills.`,
-    author: `@gatsbyjs`,
+    author: `@nodeschoolmuc`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sass`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -37,12 +39,6 @@ module.exports = {
         },
       },
     },
-    {
-      resolve: `gatsby-plugin-typography`,
-      options: {
-        pathToConfigModule: `src/utils/typography`,
-      },
-    },
     // `gatsby-plugin-offline`,
   ],
-}
+};

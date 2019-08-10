@@ -1,6 +1,8 @@
 /** @jsx jsx */
-import { Slide as SpectacleSlide } from 'spectacle'
-import { jsx, css } from '@emotion/core'
+import { Slide as SpectacleSlide } from 'spectacle';
+import { jsx, css } from '@emotion/core';
+
+const isProd = process.env.NODE_ENV === 'production';
 
 export const Slide = props => {
   return (
@@ -12,7 +14,9 @@ export const Slide = props => {
             top: 20px;
             right: 20px;
           `}
-          src="assets/images/nodeschool-muc-logo.svg"
+          src={`${
+            isProd ? '/slides/' : ''
+          }/assets/images/nodeschool-muc-logo.svg`}
           height="75.5"
           width="83.5"
           alt="NodeSchool-Munich-Logo"
@@ -33,7 +37,7 @@ export const Slide = props => {
           <hr
             css={css`
               border: none;
-              border-bottom: 1px solid #f9f919;
+              border-bottom: 1px solid #e6be02;
               width: 50px;
               margin-right: 5px;
             `}
@@ -42,7 +46,7 @@ export const Slide = props => {
             css={css`
               font-weight: bold;
               font-size: 18px;
-              color: #f9f919;
+              color: #e6be02;
               margin-right: 5px;
             `}
           >
@@ -59,5 +63,5 @@ export const Slide = props => {
         </div>
       )}
     </SpectacleSlide>
-  )
-}
+  );
+};
